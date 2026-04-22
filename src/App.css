@@ -1,0 +1,60 @@
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 30px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border-radius: 12px;
+  margin: 20px auto;
+  width: fit-content;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+  position: relative;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+  color: rgb(105, 94, 94);
+}
+
+/* Animated underline */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Active link */
+nav a.active {
+  color: rgb(249, 245, 245);
+}
+
+nav a.active::after {
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+}
