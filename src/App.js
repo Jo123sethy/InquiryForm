@@ -8,6 +8,7 @@ import NotFound from "./pages/Notfound";
 
 import "./App.css";
 import { ToastContainer } from "react-toastify";
+import DataFetcher from "./pages/DataFetcher";
 
 function App() {
   return (
@@ -16,12 +17,14 @@ function App() {
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/data">Data</NavLink>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/data" element={<DataFetcher />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer position="top-right" autoClose={2000} />
